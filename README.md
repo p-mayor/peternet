@@ -1,1 +1,1 @@
-# Some crummy website
+# My personal website @ petermayor.net

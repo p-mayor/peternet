@@ -55,9 +55,13 @@ h2 {
   font-size: 3rem;
 }
 
+.list-icons a {
+  text-decoration: none;
+  color: #495057;
+}
+
 .list-icons .list-inline-item i:hover {
   color: #1561b2;
-  text-decoration: none;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {

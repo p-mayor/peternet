@@ -4,7 +4,7 @@ body {
   @include body-font;
   padding-top: 54px;
   color: $gray-600;
-  background-color: black;
+  background-color: rgb(255, 230, 221);
 }
 @media (min-width: 992px) {
   body {

@@ -3,8 +3,7 @@
 body {
   @include body-font;
   padding-top: 54px;
-  color: $gray-600;
-  background-color: rgb(255, 230, 221);
+  background-color: rgb(232, 207, 199);
 }
 @media (min-width: 992px) {
   body {
@@ -39,6 +38,7 @@ h2 {
   font-weight: 500;
   @include heading-font;
   font-size: 1.35rem;
+  color: black;
 }
 
 .list-social-icons {

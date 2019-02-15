@@ -30,7 +30,15 @@
     "devicon": "^2.0.0",
     "jquery": "3.3.1",
     "popper.js": "^1.14.3",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "cryptiles": ">=4.1.2",
+    "minimatch": ">=3.0.2",
+    "atob": ">=2.1.0",
+    "lodash": ">=4.17.5",
+    "sshpk": ">=1.13.2",
+    "bootstrap": ">=4.1.2",
+    "randomatic": ">=3.0.0"
+
   },
   "devDependencies": {
     "browser-sync": "2.23.6",

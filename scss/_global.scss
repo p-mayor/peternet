@@ -32,6 +32,11 @@ h2 {
   font-size: 3.5rem;
 }
 
+.btn-secondary{
+  color: #de9b5a;
+  background-color: #1561b2 !important
+}
+
 .subheading {
   font-weight: 500;
   @include heading-font;

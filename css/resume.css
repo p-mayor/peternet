@@ -36,6 +36,11 @@ h2 {
   background-color: #1561b2 !important;
 }
 
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #3b4249 !important;
+}
+
 .fa-inverse {
   color: #de9b5a;
 }

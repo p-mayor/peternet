@@ -1,0 +1,142 @@
+---
+const navItems = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#education', label: 'Education' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+];
+---
+
+<nav
+  class="fixed top-0 left-0 z-50 flex flex-col bg-primary lg:h-screen lg:w-64"
+  id="sideNav"
+  aria-label="Main navigation"
+>
+  <div class="flex items-center justify-between p-4 lg:flex-col lg:pt-8">
+    <a
+      href="#page-top"
+      class="text-white text-xl font-heading lg:hidden focus:outline-2 focus:outline-offset-2 focus:outline-white"
+    >
+      PeterMayor.net
+    </a>
+    <a
+      href="#page-top"
+      class="hidden lg:block focus:outline-2 focus:outline-offset-2 focus:outline-white rounded"
+    >
+      <img
+        src="/img/prof_comp.jpg"
+        alt="Peter Mayor, frontend web developer"
+        class="w-40 h-40 rounded mx-auto mb-4 object-cover"
+      />
+    </a>
+    <button
+      class="lg:hidden text-white p-2 focus:outline-2 focus:outline-offset-2 focus:outline-white rounded"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navMenu"
+      id="navToggle"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="hidden lg:flex flex-col flex-grow items-center" id="navMenu" role="menu">
+    <ul class="flex flex-col items-center">
+      {
+        navItems.map((item) => (
+          <li role="none">
+            <a
+              href={item.href}
+              class="nav-link block py-3 text-white/90 hover:text-white focus:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white transition-colors font-heading text-lg uppercase tracking-wider"
+              role="menuitem"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+      <li class="mt-4" role="none">
+        <a
+          href="/PGMresume.pdf"
+          class="inline-block px-4 py-2 bg-secondary text-white rounded hover:bg-secondary/80 focus:outline-2 focus:outline-offset-2 focus:outline-white transition-colors text-sm"
+          role="menuitem"
+        >
+          resume.pdf<span class="sr-only"> (PDF document)</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  function toggleMenu() {
+    const isHidden = navMenu?.classList.contains('hidden');
+    navMenu?.classList.toggle('hidden');
+    navMenu?.classList.toggle('flex');
+    navToggle?.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+  }
+
+  function closeMenu() {
+    navMenu?.classList.add('hidden');
+    navMenu?.classList.remove('flex');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  }
+
+  navToggle?.addEventListener('click', toggleMenu);
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !navMenu?.classList.contains('hidden') && window.innerWidth < 1024) {
+      closeMenu();
+      navToggle?.focus();
+    }
+  });
+
+  // Scroll spy for active section
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function updateActiveLink() {
+    const scrollY = window.scrollY;
+
+    sections.forEach((section) => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = (section as HTMLElement).offsetTop - 100;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.classList.remove('active', 'text-white');
+          link.classList.add('text-white/90');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active', 'text-white');
+            link.classList.remove('text-white/90');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink);
+  updateActiveLink();
+
+  // Close mobile menu on link click
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1024) {
+        closeMenu();
+      }
+    });
+  });
+</script>

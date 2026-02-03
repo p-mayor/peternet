@@ -1,0 +1,22 @@
+[
+  {
+    "institution": "Kenzie Academy",
+    "degree": "Certification",
+    "field": "Full Stack Web Development",
+    "year": "2019"
+  },
+  {
+    "institution": "Udacity",
+    "institutionUrl": "https://udacity.com",
+    "degree": "Certifications",
+    "field": "Intro to Programming and Full Stack Web Development",
+    "year": "2017"
+  },
+  {
+    "institution": "Georgia Institute of Technology",
+    "institutionUrl": "https://gatech.edu",
+    "degree": "Bachelor of Science",
+    "field": "Mechanical Engineering",
+    "year": "2011"
+  }
+]

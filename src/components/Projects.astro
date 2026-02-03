@@ -1,0 +1,24 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import projects from '../data/projects.json';
+---
+
+<section class="min-h-screen p-8 lg:p-16 lg:pl-80" id="projects">
+  <div class="max-w-6xl">
+    <h2 class="text-4xl lg:text-5xl font-bold mb-2">Projects</h2>
+    <p class="text-xl text-gray-600 mb-12">old fun student projects</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            technologies={project.technologies}
+            github={project.github}
+            live={project.live}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

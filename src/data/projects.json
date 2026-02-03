@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Snap N Seek",
+    "description": "Geolocation-based scavenger hunt app with real-time location tracking.",
+    "technologies": ["React", "Redux", "Node.js"],
+    "github": "https://github.com/p-mayor/snapnseek"
+  },
+  {
+    "name": "Photos from Here",
+    "description": "Search for Flickr photos by city using the Google Geocoding API.",
+    "technologies": ["React", "Flickr API", "Google APIs"],
+    "github": "https://github.com/p-mayor/photos-from-here-cra-block2"
+  },
+  {
+    "name": "Kwitter",
+    "description": "Twitter clone with user authentication and real-time feed updates.",
+    "technologies": ["React", "Redux"],
+    "github": "https://github.com/jontaylor224/Kwitter-SE4-Team1"
+  },
+  {
+    "name": "Seenit",
+    "description": "Reddit-style forum with user posts and comments.",
+    "technologies": ["Python", "Jinja", "Google Cloud"],
+    "github": "https://github.com/p-mayor/FSNDblog"
+  },
+  {
+    "name": "Seattle Slew",
+    "description": "Interactive map app connecting to multiple location-based APIs.",
+    "technologies": ["JavaScript", "Knockout.js", "Google Maps"],
+    "live": "https://p-mayor.github.io/FreshMap/",
+    "github": "https://github.com/p-mayor/Freshmap"
+  },
+  {
+    "name": "Connect Four",
+    "description": "Classic two-player Connect Four game with win detection.",
+    "technologies": ["JavaScript", "HTML5", "CSS3"],
+    "live": "https://petem14.gitlab.io/con-four/",
+    "github": "https://gitlab.com/petem14/con-four"
+  },
+  {
+    "name": "Basic Kombat",
+    "description": "Browser-based fighting game with animated characters.",
+    "technologies": ["JavaScript", "HTML5", "CSS3"],
+    "live": "https://petem14.gitlab.io/combat-game/",
+    "github": "https://gitlab.com/petem14/combat-game"
+  },
+  {
+    "name": "Dinzlers",
+    "description": "Restaurant menu app with CRUD operations and user auth.",
+    "technologies": ["Python", "Flask", "SQLAlchemy"],
+    "github": "https://github.com/p-mayor/FSNDItemCatalog"
+  }
+]

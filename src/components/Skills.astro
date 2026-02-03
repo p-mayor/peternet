@@ -1,0 +1,41 @@
+---
+import SkillCategory from './SkillCategory.astro';
+
+const frontend = [
+  { name: 'HTML5', icon: 'devicon-html5-plain', url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
+  { name: 'CSS3', icon: 'devicon-css3-plain', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3' },
+  { name: 'JavaScript', icon: 'devicon-javascript-plain', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+  { name: 'TypeScript', icon: 'devicon-typescript-plain', url: 'https://www.typescriptlang.org/' },
+  { name: 'React', icon: 'devicon-react-original', url: 'https://reactjs.org/' },
+  { name: 'Redux', icon: 'devicon-redux-original', url: 'https://redux.js.org/' },
+  { name: 'Next.js', icon: 'devicon-nextjs-original', url: 'https://nextjs.org/' },
+  { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-plain', url: 'https://tailwindcss.com/' },
+  { name: 'Sass', icon: 'devicon-sass-original', url: 'https://sass-lang.com/' },
+  { name: 'Bootstrap', icon: 'devicon-bootstrap-plain', url: 'http://getbootstrap.com/' },
+];
+
+const backend = [
+  { name: 'Node.js', icon: 'devicon-nodejs-plain', url: 'https://nodejs.org/en/' },
+  { name: 'Express', icon: 'devicon-express-original', url: 'https://expressjs.com' },
+  { name: 'Python', icon: 'devicon-python-plain', url: 'https://python.org/' },
+  { name: 'Django', icon: 'devicon-django-plain', url: 'https://www.djangoproject.com/' },
+  { name: 'PostgreSQL', icon: 'devicon-postgresql-plain', url: 'https://www.postgresql.org/' },
+  { name: 'MongoDB', icon: 'devicon-mongodb-plain', url: 'https://mongodb.com/' },
+];
+
+const tools = [
+  { name: 'Git', icon: 'devicon-git-plain', url: 'https://git-scm.com/' },
+  { name: 'GitHub', icon: 'devicon-github-original', url: 'https://github.com/' },
+  { name: 'npm', icon: 'devicon-npm-original-wordmark', url: 'https://www.npmjs.com/' },
+  { name: 'AWS', icon: 'devicon-amazonwebservices-original', url: 'https://aws.amazon.com/' },
+];
+---
+
+<section class="min-h-screen p-8 lg:p-16 lg:pl-80" id="skills">
+  <div class="max-w-4xl">
+    <h2 class="text-4xl lg:text-5xl font-bold mb-12">Skills</h2>
+    <SkillCategory title="Frontend" skills={frontend} />
+    <SkillCategory title="Backend" skills={backend} />
+    <SkillCategory title="Tools" skills={tools} />
+  </div>
+</section>

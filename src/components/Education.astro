@@ -1,0 +1,36 @@
+---
+import education from '../data/education.json';
+---
+
+<section class="min-h-screen p-8 lg:p-16 lg:pl-80" id="education">
+  <div class="max-w-4xl">
+    <h2 class="text-4xl lg:text-5xl font-bold mb-12">Education</h2>
+    {
+      education.map((edu) => (
+        <article class="flex flex-col md:flex-row md:justify-between mb-10">
+          <div class="flex-grow md:mr-8">
+            <h3 class="text-2xl font-heading uppercase mb-1">
+              {edu.institutionUrl ? (
+                <a
+                  href={edu.institutionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-primary focus:text-primary focus:outline-2 focus:outline-offset-2 focus:outline-primary rounded transition-colors"
+                >
+                  {edu.institution}<span class="sr-only"> (opens in new window)</span>
+                </a>
+              ) : (
+                edu.institution
+              )}
+            </h3>
+            <div class="text-xl text-gray-600 mb-2">{edu.degree}</div>
+            <p class="text-gray-700">{edu.field}</p>
+          </div>
+          <div class="md:text-right mt-2 md:mt-0 flex-shrink-0">
+            <span class="text-gray-600">{edu.year}</span>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

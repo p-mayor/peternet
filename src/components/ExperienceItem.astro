@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  companyUrl?: string;
+  companySubtitle?: string;
+  description: string;
+  dates: string;
+}
+
+const { title, company, companyUrl, companySubtitle, description, dates } = Astro.props;
+---
+
+<article class="flex flex-col md:flex-row md:justify-between mb-10">
+  <div class="flex-grow md:mr-8">
+    <h3 class="text-2xl font-heading uppercase mb-1">{title}</h3>
+    <div class="text-xl text-gray-600 mb-3">
+      {
+        companyUrl ? (
+          <a
+            href={companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-primary focus:text-primary focus:outline-2 focus:outline-offset-2 focus:outline-primary rounded transition-colors"
+          >
+            {company}<span class="sr-only"> (opens in new window)</span>
+          </a>
+        ) : (
+          company
+        )
+      }
+      {companySubtitle && <span> - {companySubtitle}</span>}
+    </div>
+    <p class="text-gray-700">{description}</p>
+  </div>
+  <div class="md:text-right mt-2 md:mt-0 flex-shrink-0">
+    <span class="text-gray-600">{dates}</span>
+  </div>
+</article>

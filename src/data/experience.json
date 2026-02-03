@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Senior Consultant",
+    "company": "Aviron Software",
+    "companyUrl": "https://www.avironsoftware.com/",
+    "description": "Worked with multiple clients to create and maintain web and mobile apps with React and React Native",
+    "dates": "2021 to present"
+  },
+  {
+    "title": "Associate Instructor & Facilitator",
+    "company": "Kenzie Academy",
+    "description": "Taught front-end web development and mentored students learning HTML, CSS, JavaScript, React, Redux, and Express",
+    "dates": "2019 to 2021"
+  },
+  {
+    "title": "Apple Technical Support iOS Advisor",
+    "company": "Kelly Services",
+    "companyUrl": "https://www.kellyservices.com/",
+    "description": "Remotely resolved technical problems for customers using iOS devices, Apple apps, or Apple services",
+    "dates": "2018 to 2019"
+  },
+  {
+    "title": "Quality Engineer",
+    "company": "Automotive Manufacturing",
+    "description": "Managed quality control processes, APQP/PPAP projects, and inspection standards at Nyloncraft and Universal Bearings",
+    "dates": "2011 to 2016"
+  }
+]

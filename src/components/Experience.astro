@@ -1,0 +1,22 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+import experience from '../data/experience.json';
+---
+
+<section class="min-h-screen p-8 lg:p-16 lg:pl-80" id="experience">
+  <div class="max-w-4xl">
+    <h2 class="text-4xl lg:text-5xl font-bold mb-12">Experience</h2>
+    {
+      experience.map((job) => (
+        <ExperienceItem
+          title={job.title}
+          company={job.company}
+          companyUrl={job.companyUrl}
+          companySubtitle={job.companySubtitle}
+          description={job.description}
+          dates={job.dates}
+        />
+      ))
+    }
+  </div>
+</section>

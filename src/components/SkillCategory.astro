@@ -1,0 +1,35 @@
+---
+interface Skill {
+  name: string;
+  icon: string;
+  url: string;
+}
+
+interface Props {
+  title: string;
+  skills: Skill[];
+}
+
+const { title, skills } = Astro.props;
+---
+
+<div class="mb-8">
+  <h3 class="text-2xl font-heading uppercase mb-4">{title}</h3>
+  <ul class="flex flex-wrap gap-3" role="list">
+    {
+      skills.map((skill) => (
+        <li>
+          <a
+            href={skill.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block text-5xl text-gray-800 hover:text-primary focus:text-primary focus:outline-2 focus:outline-offset-2 focus:outline-primary rounded transition-colors"
+            aria-label={`${skill.name} (opens in new window)`}
+          >
+            <i class={skill.icon} aria-hidden="true" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

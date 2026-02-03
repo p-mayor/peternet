@@ -4,28 +4,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website at petermayor.net built on Start Bootstrap Resume template. Static single-page site with Bootstrap 4, custom SCSS, and minimal JavaScript.
+Personal portfolio website at petermayor.net built with Astro and Tailwind CSS. Static single-page site with component-based architecture.
 
 ## Build Commands
 
-- `npm run build` or `gulp` - Full build (CSS compilation, JS minification, vendor copy)
-- `gulp dev` - Development server with browser-sync and live reload
-- `gulp css` - Compile and minify SCSS to CSS
-- `gulp js` - Minify JavaScript
+- `npm run dev` - Development server with hot reload
+- `npm run build` - Production build to `dist/`
+- `npm run preview` - Preview production build locally
 
 ## Architecture
 
 ### File Structure
 
-- `index.html` - Single-page portfolio (About, Projects, Skills, Experience, Education sections)
-- `scss/` - SASS source files with partials pattern
-  - `resume.scss` - Main entry importing all partials
-  - `_variables.scss` - Colors and layout constants
-- `js/resume.js` - jQuery-based smooth scroll and navigation
-- `css/` - Compiled CSS output (generated, don't edit directly)
-- `vendor/` - Third-party libraries copied from node_modules
+- `src/pages/index.astro` - Main page composing all sections
+- `src/layouts/Layout.astro` - Base HTML layout with meta tags and fonts
+- `src/components/` - Astro components for each section
+  - `Nav.astro` - Sidebar navigation with scroll-spy
+  - `About.astro` - About section with bio and social links
+  - `Projects.astro` - Projects grid using ProjectCard
+  - `Skills.astro` - Skills section using SkillCategory
+  - `Experience.astro` - Work history using ExperienceItem
+  - `Education.astro` - Education entries
+  - `SocialLinks.astro` - Email, LinkedIn, GitHub icons
+- `src/data/` - JSON data files
+  - `projects.json` - Project entries
+  - `experience.json` - Work history
+  - `education.json` - Education entries
+- `src/styles/global.css` - Tailwind imports and custom styles
+- `public/` - Static assets (images, resume PDF)
 
-### Color Variables (scss/_variables.scss)
+### Color Theme (tailwind.config.mjs)
 
 - Primary: #1561b2 (blue)
 - Secondary: #868e96
@@ -34,4 +42,4 @@ Personal portfolio website at petermayor.net built on Start Bootstrap Resume tem
 
 ### Deployment
 
-GitHub Actions workflow deploys to AWS S3 on push to master. Runs `npm ci` and `npx gulp css js`, then syncs to S3 bucket.
+GitHub Actions workflow deploys to AWS S3 on push to master. Runs `npm run build`, then syncs `dist/` to S3 bucket.

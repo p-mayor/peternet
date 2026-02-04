@@ -2,8 +2,6 @@
 
 Personal portfolio website built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com).
 
-[![Preview](public/img/preview.png)](http://petermayor.net)
-
 ## Development
 
 ```bash

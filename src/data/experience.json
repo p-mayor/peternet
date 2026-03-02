@@ -1,10 +1,17 @@
 [
   {
+    "title": "Member of Technical Staff, Atlas",
+    "company": "Anchorage Digital",
+    "companyUrl": "https://www.anchorage.com/",
+    "description": "Worked on the Atlas cross-functional team to update the Anchorage web app using Next.js, Jotai, and GraphQL",
+    "dates": "2026 to present"
+  },
+  {
     "title": "Senior Consultant",
     "company": "Aviron Software",
     "companyUrl": "https://www.avironsoftware.com/",
     "description": "Worked with multiple clients to create and maintain web and mobile apps with React and React Native",
-    "dates": "2021 to present"
+    "dates": "2021 to 2026"
   },
   {
     "title": "Associate Instructor & Facilitator",
